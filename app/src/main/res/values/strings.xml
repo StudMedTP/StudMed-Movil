@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">StudMed</string>
+
+    <string name="op_inicio_d">Inicio</string>
+    <string name="op_control_asistencia_d">Control de Asistencia</string>
+    <string name="op_evaluaciones_d">Evaluaciones</string>
+    <string name="op_notificaciones_d">Notificaciones</string>
+    <string name="op_support_d">Support</string>
+    <string name="op_settings_d">Settings</string>
+    <string name="op_cerrar_sesion_d">Cerrar Sesion</string>
+    <string name="op_perfil_d">Perfil</string>
+
+    <string name="txt_bienvenido">Bienvenido</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

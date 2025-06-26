@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group
+        android:id="@+id/grupo_op"
+        android:checkableBehavior="single">
+
+        <!--Inicio-->
+        <item
+            android:id="@+id/op_inicio_d"
+            android:title="@string/op_inicio_d"
+            android:icon="@drawable/icon_inicio"
+            />
+
+        <!--Control de Asistencia-->
+        <item
+            android:id="@+id/op_control_asistencia_d"
+            android:title="@string/op_control_asistencia_d"
+            android:icon="@drawable/icon_asistencia"
+            />
+
+        <!--Evaluaciones-->
+        <item
+            android:id="@+id/op_evaluaciones_d"
+            android:title="@string/op_evaluaciones_d"
+            android:icon="@drawable/icon_evaluaciones"
+            />
+
+        <!--Notificaciones-->
+        <item
+            android:id="@+id/op_notificaciones_d"
+            android:title="@string/op_notificaciones_d"
+            android:icon="@drawable/icon_notificaciones"
+            />
+
+    </group>
+
+    <!--Cerrar Sesion-->
+    <item
+        android:id="@+id/op_cerrar_sesion_d"
+        android:title="@string/op_cerrar_sesion_d"
+        android:icon="@drawable/icon_cerrarsesion"
+        />
+
+</menu>

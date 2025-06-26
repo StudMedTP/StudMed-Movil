@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--Support-->
+    <item
+        android:id="@+id/op_support_d"
+        android:title="@string/op_support_d"
+        />
+    <!--Settings-->
+    <item
+        android:id="@+id/op_settings_d"
+        android:title="@string/op_settings_d"
+        />
+
+    <!--Perfil-->
+    <item
+        android:id="@+id/op_perfil_d"
+        android:title="@string/op_perfil_d"
+        />
+
+</menu>

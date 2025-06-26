@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "824563176004",
+    "project_id": "studmed-bb66f",
+    "storage_bucket": "studmed-bb66f.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:824563176004:android:41a0534ad05ccf89762211",
+        "android_client_info": {
+          "package_name": "com.example.studmed"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAabbEbfXluZ6DyR5uWst--EzfkUvX13lU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
