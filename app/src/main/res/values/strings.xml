@@ -24,6 +24,12 @@
     <string name="etCPasswordD">Confirmar Password</string>
     <string name="btnRegistrarD">Registrarme</string>
 
+    <!--Login de docente-->
+    <string name="txtLoginD">Login de docente</string>
+    <string name="btnLogin">Ingresar</string>
+    <string name="txtNoCuenta">¿No tienes una cuenta?</string>
+    <string name="tvRegistrarD">Registrarme</string>
+
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
