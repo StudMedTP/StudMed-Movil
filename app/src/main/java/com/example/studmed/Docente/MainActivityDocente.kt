@@ -1,5 +1,6 @@
 package com.example.studmed.Docente
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
 import android.widget.Toast
@@ -21,12 +22,13 @@ import com.example.studmed.Docente.Nav_Fragments_Docente.FragmentNotificacionesD
 import com.example.studmed.R
 import com.example.studmed.databinding.ActivityMainDocenteBinding
 import com.google.android.material.navigation.NavigationView
+import com.google.firebase.auth.FirebaseAuth
 
 class MainActivityDocente : AppCompatActivity() , NavigationView.OnNavigationItemSelectedListener{
 
 
     private lateinit var binding : ActivityMainDocenteBinding
-
+    private var firebaseAuth : FirebaseAuth?=null
 
 
 
@@ -37,6 +39,9 @@ class MainActivityDocente : AppCompatActivity() , NavigationView.OnNavigationIte
 
         val toolbar = findViewById<androidx.appcompat.widget.Toolbar>(R.id.toolbar)
         setSupportActionBar(toolbar)
+
+        firebaseAuth = FirebaseAuth.getInstance()
+        comprobarSesion()
 
         binding.navigationView.setNavigationItemSelectedListener(this)
 
@@ -53,6 +58,16 @@ class MainActivityDocente : AppCompatActivity() , NavigationView.OnNavigationIte
 
         replaceFragment(FragmentInicioD())
         binding.navigationView.setCheckedItem(R.id.op_inicio_d)
+    }
+
+    private fun comprobarSesion() {
+        /*Si el usuario no ha iniciado sesion, que lo diriga a OpcionesLogin*/
+        if (firebaseAuth!!.currentUser==null){
+            startActivity(Intent(applicationContext, RegistroDocenteActivity::class.java))
+            Toast.makeText(applicationContext, "Docente no registrado o no logeado", Toast.LENGTH_SHORT).show()
+        }else{
+            Toast.makeText(applicationContext, "Docente en linea", Toast.LENGTH_SHORT).show()
+        }
     }
 
     private fun replaceFragment(fragment: Fragment) {
