@@ -44,7 +44,7 @@ class SplashScreenActivity : AppCompatActivity() {
     private fun comprobarTipoUsuario(){
         val firebaseUser = firebaseAuth.currentUser
         if (firebaseUser == null){
-            startActivity(Intent(this, MainActivityDocente::class.java))
+            startActivity(Intent(this, SeleccionarTipoActivity::class.java))
         }else{
             val reference = FirebaseDatabase.getInstance().getReference("Usuarios")
             reference.child(firebaseUser.uid)
@@ -52,7 +52,7 @@ class SplashScreenActivity : AppCompatActivity() {
                     override fun onDataChange(snapshot: DataSnapshot) {
                         val tipoU = snapshot.child("tipoUsuario").value
 
-                        if (tipoU == "vendedor"){
+                        if (tipoU == "docente"){
                             startActivity(Intent(this@SplashScreenActivity, MainActivityDocente::class.java))
                             finishAffinity()
                         }else if (tipoU == "cliente"){

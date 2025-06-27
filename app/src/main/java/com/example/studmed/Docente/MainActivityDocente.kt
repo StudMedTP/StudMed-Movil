@@ -20,6 +20,7 @@ import com.example.studmed.Docente.Nav_Fragments_Docente.FragmentEvaluacionesD
 import com.example.studmed.Docente.Nav_Fragments_Docente.FragmentInicioD
 import com.example.studmed.Docente.Nav_Fragments_Docente.FragmentNotificacionesD
 import com.example.studmed.R
+import com.example.studmed.SeleccionarTipoActivity
 import com.example.studmed.databinding.ActivityMainDocenteBinding
 import com.google.android.material.navigation.NavigationView
 import com.google.firebase.auth.FirebaseAuth
@@ -62,7 +63,7 @@ class MainActivityDocente : AppCompatActivity() , NavigationView.OnNavigationIte
 
     private fun cerrarSesion(){
         firebaseAuth!!.signOut()
-        startActivity(Intent(applicationContext, LoginDocenteActivity::class.java))
+        startActivity(Intent(applicationContext, SeleccionarTipoActivity::class.java))
         finish()
         Toast.makeText(applicationContext, "Has cerrado sesión", Toast.LENGTH_SHORT).show()
     }
@@ -70,7 +71,7 @@ class MainActivityDocente : AppCompatActivity() , NavigationView.OnNavigationIte
     private fun comprobarSesion() {
         /*Si el usuario no ha iniciado sesion, que lo diriga a OpcionesLogin*/
         if (firebaseAuth!!.currentUser==null){
-            startActivity(Intent(applicationContext, LoginDocenteActivity::class.java))
+            startActivity(Intent(applicationContext, SeleccionarTipoActivity::class.java))
             Toast.makeText(applicationContext, "Docente no registrado o no logeado", Toast.LENGTH_SHORT).show()
         }else{
             Toast.makeText(applicationContext, "Docente en linea", Toast.LENGTH_SHORT).show()
