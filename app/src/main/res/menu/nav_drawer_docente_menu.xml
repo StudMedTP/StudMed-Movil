@@ -21,6 +21,12 @@
             android:icon="@drawable/icon_asistencia"
             />
 
+        <!--Secciones-->
+        <item
+            android:id="@+id/op_secciones_d"
+            android:title="@string/op_secciones_d"
+            android:icon="@drawable/ico_seccion"
+            />
         <!--Evaluaciones-->
         <item
             android:id="@+id/op_evaluaciones_d"

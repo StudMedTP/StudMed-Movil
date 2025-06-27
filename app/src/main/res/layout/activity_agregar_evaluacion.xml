@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Docente.evaluaciones.AgregarEvaluacionActivity">
+
+    <!--Toolbar-->
+
+    <RelativeLayout
+        android:id="@+id/toolbarRL"
+        android:layout_width="match_parent"
+        android:layout_height="55dp">
+
+        <TextView
+            android:text="@string/txtAgregarEvaluaciones"
+            android:layout_centerInParent="true"
+            android:textStyle="bold"
+            
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="#ccc"/>
+
+
+
+        
+    </RelativeLayout>
+
+    <!--Icono agregar evaluacion-->
+    <RelativeLayout
+        android:id="@+id/RLImagen"
+        android:layout_below="@id/toolbarRL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgAgregarEvaluacion"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/agregar_evaluacion"
+            android:layout_width="100dp"
+            android:layout_height="100dp"/>
+
+
+    </RelativeLayout>
+
+    <!--Informacion de la evaluacion-->
+    <androidx.core.widget.NestedScrollView
+
+        android:layout_below="@+id/RLImagen"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <!--Listar las  -->
+
+
+            <!--Nombre de la Evaluacion-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/TIL_TituloEva"
+
+                android:layout_below="@id/RLImagen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:ignore="NotSibling"
+                >
+
+                <EditText
+                    android:id="@+id/etTituloEva"
+                    android:hint="@string/etTituloEva"
+                    android:inputType="textCapSentences"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--Descripcion-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/TIL_DescripcionEva"
+                android:layout_below="@id/TIL_TituloEva"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/etDescripcionEva"
+                    android:hint="@string/etDescripcionEva"
+                    android:inputType="textCapSentences"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--Fecha-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/TIL_FechaEva"
+                android:layout_below="@id/TIL_DescripcionEva"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/etFechavaEva"
+                    android:hint="@string/etFechavaEva"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--Seccion-->
+            <TextView
+                android:id="@+id/Seccion"
+                android:hint="@string/Seccion"
+                android:padding="15dp"
+                android:textSize="17sp"
+                android:layout_marginTop="5dp"
+                app:drawableEndCompat="@drawable/ico_abajo"
+                android:gravity="center_vertical"
+                android:background="@drawable/custom_edittext"
+                android:layout_below="@+id/TIL_FechaEva"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <!--Codigo-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/TIL_CodigoEva"
+                android:layout_below="@id/Seccion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/etCodigoEva"
+                    android:hint="@string/etCodigoEva"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+        </RelativeLayout>
+
+
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+    <!--Agregar Producto-->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnAgregarEvaluacion"
+        android:text="@string/btnAgregarEvaluacion"
+        android:layout_alignParentBottom="true"
+        android:textAllCaps="true"
+        android:layout_margin="10dp"
+        app:cornerRadius="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+
+
+</RelativeLayout>
