@@ -25,6 +25,12 @@
             android:title="@string/op_evaluaciones_e"
             />
 
+        <!--Evaluaciones-->
+        <item
+            android:id="@+id/op_notificaciones_e"
+            android:title="@string/op_notificaciones_e"
+            />
+
     </group>
 
     <!--Cerrar sesion-->
