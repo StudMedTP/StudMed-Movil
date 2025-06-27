@@ -1,6 +1,8 @@
 package com.example.studmed.Docente.evaluaciones
 
+import android.app.ProgressDialog
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.text.isDigitsOnly
@@ -20,20 +22,104 @@ class AgregarEvaluacionActivity : AppCompatActivity() {
 
     private lateinit var seccionesArrayList: ArrayList<ModeloSeccion>
 
+    private lateinit var progressDialog: ProgressDialog
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityAgregarEvaluacionBinding.inflate(layoutInflater)
 
         setContentView(binding.root)
 
-
         cargarSecciones()
+
+        progressDialog = ProgressDialog(this)
+        progressDialog.setTitle("Espere por favor")
+        progressDialog.setCanceledOnTouchOutside(false)
 
         binding.Seccion.setOnClickListener {
             selectSecciones()
         }
 
+        binding.btnAgregarEvaluacion.setOnClickListener {
+            validarInfo()
+        }
 
+    }
+
+    private var tituloEva = ""
+    private var descripcionEva = ""
+    private var fechaEva = ""
+    private var seccion = ""
+    private var codigoEva = ""
+
+    private fun validarInfo() {
+        tituloEva = binding.etTituloEva.text.toString().trim()
+        descripcionEva = binding.etDescripcionEva.text.toString().trim()
+        fechaEva = binding.etFechavaEva.text.toString().trim()
+        seccion = binding.Seccion.text.toString().trim()
+        codigoEva = binding.etCodigoEva.text.toString().trim()
+
+        if (tituloEva.isEmpty()){
+            binding.etTituloEva.error = "Ingrese Titulo"
+            binding.etTituloEva.requestFocus()
+        }
+        else if (descripcionEva.isEmpty()){
+            binding.etDescripcionEva.error = "Ingrese descripcion"
+            binding.etDescripcionEva.requestFocus()
+        }
+        else if (fechaEva.isEmpty()){
+            binding.etFechavaEva.error = "Ingrese fecha"
+            binding.etFechavaEva.requestFocus()
+        }
+        else if (seccion.isEmpty()){
+            binding.Seccion.error = "Ingrese seccion"
+            binding.Seccion.requestFocus()
+        }
+        else if (codigoEva.isEmpty()){
+            binding.etCodigoEva.error = "Ingrese codigo"
+            binding.etCodigoEva.requestFocus()
+        }
+        else {
+            agregarEvaluacion()
+        }
+
+    }
+
+    private fun agregarEvaluacion() {
+
+        progressDialog.setMessage("Agregando Evaluacion")
+        progressDialog.show()
+
+        var ref = FirebaseDatabase.getInstance().getReference("Evaluaciones")
+        var keyId = ref.push().key
+
+        val hashMap= HashMap<String, Any>()
+
+        hashMap["id"] = "${keyId}"
+        hashMap["titulo"] = "${tituloEva}"
+        hashMap["descripcion"] = "${descripcionEva}"
+        hashMap["fecha"] = "${fechaEva}"
+        hashMap["seccion"] = "${seccion}"
+        hashMap["codigo"] = "${codigoEva}"
+
+        ref.child(keyId!!)
+            .setValue(hashMap)
+            .addOnSuccessListener {
+                progressDialog.dismiss()
+                Toast.makeText(this,"Se agrego la evaluacion con éxito", Toast.LENGTH_SHORT).show()
+                limpiarCampos()
+            }
+            .addOnFailureListener {e->
+                Toast.makeText(this, "${e.message}", Toast.LENGTH_SHORT).show()
+            }
+    }
+
+    private fun limpiarCampos(){
+        binding.etTituloEva.setText("")
+        binding.etDescripcionEva.setText("")
+        binding.etFechavaEva.setText("")
+        binding.Seccion.setText("")
+        binding.etCodigoEva.setText("")
 
     }
 
@@ -54,11 +140,7 @@ class AgregarEvaluacionActivity : AppCompatActivity() {
                 TODO("Not yet implemented")
             }
         })
-
-
-
     }
-
 
     private var idSeccion = ""
     private var tituloSeccion = ""
