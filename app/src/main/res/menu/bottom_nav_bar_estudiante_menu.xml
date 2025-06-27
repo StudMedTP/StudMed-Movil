@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/op_support_e"
+        android:title="@string/op_support_e"
+        />
+
+    <item
+        android:id="@+id/op_settings_e"
+        android:title="@string/op_settings_e"
+        />
+
+    <item
+        android:id="@+id/op_perfil_e"
+        android:title="@string/op_perfil_e"
+        />
+
+</menu>

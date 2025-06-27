@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.os.CountDownTimer
 import androidx.appcompat.app.AppCompatActivity
+import com.example.studmed.Estudiante.MainActivityEstudiante
 
 
 class SplashScreenActivity : AppCompatActivity() {
@@ -19,7 +20,7 @@ class SplashScreenActivity : AppCompatActivity() {
     private fun verBienvenida() {
         object : CountDownTimer(3000, 1000) {
             override fun onFinish() {
-                startActivity(Intent(applicationContext, MainActivity::class.java))
+                startActivity(Intent(applicationContext, MainActivityEstudiante::class.java))
                 finishAffinity()
             }
 

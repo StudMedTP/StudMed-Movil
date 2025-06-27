@@ -1,16 +1,17 @@
-package com.example.studmed
+package com.example.studmed.Estudiante
 
 import android.content.Intent
 import android.os.Bundle
 import android.os.CountDownTimer
 import androidx.appcompat.app.AppCompatActivity
 import com.example.studmed.Docente.MainActivityDocente
+import com.example.studmed.R
 
 
-class MainActivity : AppCompatActivity() {
+class MainActivityEstudiante : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_main_estudiante)
 
         verBienvenida()
 

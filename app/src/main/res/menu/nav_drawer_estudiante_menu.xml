@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group
+        android:id="@+id/grupo_op"
+        android:checkableBehavior="single">
+
+        <!--Inicio-->
+        <item
+            android:id="@+id/op_inicio_e"
+            android:title="@string/op_inicio_e"
+            />
+
+        <!--Asistencia-->
+        <item
+            android:id="@+id/op_control_asistencia_e"
+            android:title="@string/op_control_asistencia_e"
+            />
+
+        <!--Evaluaciones-->
+        <item
+            android:id="@+id/op_evaluaciones_e"
+            android:title="@string/op_evaluaciones_e"
+            />
+
+    </group>
+
+    <!--Cerrar sesion-->
+    <item
+        android:id="@+id/op_cerrar_sesion_e"
+        android:title="@string/op_cerrar_sesion_e"
+        />
+
+</menu>

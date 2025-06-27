@@ -4,14 +4,30 @@
     <string name="open_drawer">Open drawer</string>
     <string name="close_drawer">Close drawer</string>
 
+    <!--Navigation Drawer Docente-->
     <string name="op_inicio_d">Inicio</string>
     <string name="op_control_asistencia_d">Control de Asistencia</string>
     <string name="op_evaluaciones_d">Evaluaciones</string>
     <string name="op_notificaciones_d">Notificaciones</string>
+    <string name="op_cerrar_sesion_d">Cerrar Sesion</string>
+
+    <!--Navigation Drawer Estudiante-->
+    <string name="op_inicio_e">Inicio</string>
+    <string name="op_control_asistencia_e">Control de Asistencia</string>
+    <string name="op_evaluaciones_e">Evaluaciones</string>
+    <string name="op_notificaciones_e">Notificaciones</string>
+    <string name="op_cerrar_sesion_e">Cerrar Sesion</string>
+
+    <!--Bottom Navigation Bar Docente-->
     <string name="op_support_d">Support</string>
     <string name="op_settings_d">Settings</string>
-    <string name="op_cerrar_sesion_d">Cerrar Sesion</string>
     <string name="op_perfil_d">Perfil</string>
+
+    <!--Bottom Navigation Bar Estudiante-->
+    <string name="op_support_e">Support</string>
+    <string name="op_settings_e">Settings</string>
+    <string name="op_perfil_e">Perfil</string>
+
 
     <string name="txt_bienvenido">Bienvenido</string>
 
