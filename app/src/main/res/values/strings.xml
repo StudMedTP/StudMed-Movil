@@ -7,6 +7,7 @@
     <!--Navigation Drawer Docente-->
     <string name="op_inicio_d">Inicio</string>
     <string name="op_control_asistencia_d">Control de Asistencia</string>
+    <string name="op_secciones_d">Secciones</string>
     <string name="op_evaluaciones_d">Evaluaciones</string>
     <string name="op_notificaciones_d">Notificaciones</string>
     <string name="op_cerrar_sesion_d">Cerrar Sesion</string>
@@ -45,6 +46,25 @@
     <string name="btnLogin">Ingresar</string>
     <string name="txtNoCuenta">¿No tienes una cuenta?</string>
     <string name="tvRegistrarD">Registrarme</string>
+
+
+    <!--Secciones-->
+    <string name="etSeccionD">Ingrese la Sección</string>
+    <string name="btnAgregarSeccion">Agregar Sección</string>
+
+
+    <!--Agregar Evaluaciones-->
+    <string name="txtAgregarEvaluaciones">Agregar Evaluaciones</string>
+    <string name="etTituloEva">Nombre de la evaluación</string>
+    <string name="etDescripcionEva">Descripción</string>
+    <string name="etFechavaEva">Fecha</string>
+
+    <string name="Seccion">Sección</string>
+
+    <string name="etSeccionEva">Sección</string>
+    <string name="etCodigoEva">Codigo</string>
+
+    <string name="btnAgregarEvaluacion">Agregar Evaluación</string>
 
 
     <!-- TODO: Remove or change this placeholder text -->

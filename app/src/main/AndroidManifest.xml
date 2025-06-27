@@ -14,6 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.StudMed">
         <activity
+            android:name=".Docente.evaluaciones.AgregarEvaluacionActivity"
+            android:exported="false" />
+        <activity
             android:name=".Docente.LoginDocenteActivity"
             android:exported="false" />
         <activity
@@ -21,20 +24,19 @@
             android:exported="false" />
         <activity
             android:name=".SplashScreenActivity"
-            android:exported="true" >
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".Docente.MainActivityDocente"
             android:exported="false" />
         <activity
             android:name=".Estudiante.MainActivityEstudiante"
-            android:exported="false">
-        </activity>
+            android:exported="false"></activity>
     </application>
 
 </manifest>

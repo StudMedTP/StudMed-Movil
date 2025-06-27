@@ -5,13 +5,40 @@
     android:layout_height="match_parent"
     tools:context=".Docente.Nav_Fragments_Docente.FragmentEvaluacionesD">
 
+
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Evaluaciones"
-        android:gravity="center"
-        android:textSize="25sp"
-        android:textStyle="bold"/>
+        android:layout_height="match_parent">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/addEvaluacion"
+            android:backgroundTint="@color/celeste_claro"
+
+            android:src="@drawable/ico_agregar"
+            android:tint="@color/white"
+
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_alignParentEnd="true"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Evaluaciones"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+
+
+
+
+
+    </RelativeLayout>
 
 </FrameLayout>
