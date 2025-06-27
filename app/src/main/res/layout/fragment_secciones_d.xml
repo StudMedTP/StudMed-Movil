@@ -46,6 +46,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
+        <!--Lista de secciones-->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvSecciones"
+            android:layout_margin="5dp"
+            tools:listitem="@layout/item_seccion_d"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
 
 
 
