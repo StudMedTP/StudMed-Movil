@@ -70,12 +70,12 @@ class RegistroEstudianteActivity : AppCompatActivity() {
             binding.etCPasswordE.error = "No coinciden los password"
             binding.etCPasswordE.requestFocus()
         }else{
-            registrarCliente()
+            registrarEstudiante()
         }
 
     }
 
-    private fun registrarCliente() {
+    private fun registrarEstudiante() {
         progressDialog.setMessage("Creando cuenta")
         progressDialog.show()
 

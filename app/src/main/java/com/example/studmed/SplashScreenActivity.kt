@@ -53,10 +53,10 @@ class SplashScreenActivity : AppCompatActivity() {
                         val tipoU = snapshot.child("tipoUsuario").value
 
                         if (tipoU == "docente"){
-                            startActivity(Intent(this@SplashScreenActivity, MainActivityDocente::class.java))
+                            startActivity(Intent(this@SplashScreenActivity, SeleccionarTipoActivity::class.java))
                             finishAffinity()
-                        }else if (tipoU == "cliente"){
-                            startActivity(Intent(this@SplashScreenActivity, MainActivityEstudiante::class.java))
+                        }else if (tipoU == "estudiante"){
+                            startActivity(Intent(this@SplashScreenActivity, SeleccionarTipoActivity::class.java))
                             finishAffinity()
                         }
                     }

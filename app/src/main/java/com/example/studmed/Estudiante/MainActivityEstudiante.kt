@@ -25,13 +25,16 @@ import com.example.studmed.Estudiante.Nav_Fragments_Estudiante.FragmentEvaluacio
 import com.example.studmed.Estudiante.Nav_Fragments_Estudiante.FragmentInicioEstudiante
 import com.example.studmed.Estudiante.Nav_Fragments_Estudiante.FragmentNotificacionesEstudiante
 import com.example.studmed.R
+import com.example.studmed.SeleccionarTipoActivity
 import com.example.studmed.databinding.ActivityMainEstudianteBinding
 import com.google.android.material.navigation.NavigationView
+import com.google.firebase.auth.FirebaseAuth
 
 
 class MainActivityEstudiante : AppCompatActivity() , NavigationView.OnNavigationItemSelectedListener {
 
     private lateinit var binding : ActivityMainEstudianteBinding
+    private var firebaseAuth : FirebaseAuth?=null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -40,6 +43,9 @@ class MainActivityEstudiante : AppCompatActivity() , NavigationView.OnNavigation
 
         val toolbar = findViewById<Toolbar>(R.id.toolbar)
         setSupportActionBar(toolbar)
+
+        firebaseAuth = FirebaseAuth.getInstance()
+        comprobarSesion()
 
         binding.navigationView.setNavigationItemSelectedListener(this)
 
@@ -58,6 +64,22 @@ class MainActivityEstudiante : AppCompatActivity() , NavigationView.OnNavigation
 
         verBienvenida()
 
+    }
+
+    private fun comprobarSesion(){
+        if(firebaseAuth!!.currentUser==null){
+            startActivity(Intent(this@MainActivityEstudiante, SeleccionarTipoActivity::class.java))
+            finishAffinity()
+        }else{
+            Toast.makeText(this, "Usuario en linea", Toast.LENGTH_SHORT).show()
+        }
+    }
+
+    private fun cerrarSesion(){
+        firebaseAuth!!.signOut()
+        startActivity(Intent(this@MainActivityEstudiante, SeleccionarTipoActivity::class.java))
+        finishAffinity()
+        Toast.makeText(this, "Cerraste sesión", Toast.LENGTH_SHORT).show()
     }
 
     private fun replaceFragment(fragment : Fragment) {
@@ -96,7 +118,7 @@ class MainActivityEstudiante : AppCompatActivity() , NavigationView.OnNavigation
                 replaceFragment(FragmentNotificacionesEstudiante())
             }
             R.id.op_cerrar_sesion_e->{
-                Toast.makeText(applicationContext, "Has cerrado sesion", Toast.LENGTH_SHORT).show()
+                cerrarSesion()
             }
             R.id.op_support_e->{
                 replaceFragment(FragmentSupportE())
