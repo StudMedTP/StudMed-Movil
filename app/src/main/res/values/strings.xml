@@ -3,6 +3,9 @@
 
     <string name="open_drawer">Open drawer</string>
     <string name="close_drawer">Close drawer</string>
+    
+    <string name="tipoDocente">Docente</string>
+    <string name="tipoEstudiante">Estudiante</string>
 
     <!--Navigation Drawer Docente-->
     <string name="op_inicio_d">Inicio</string>
@@ -34,19 +37,32 @@
 
 
     <!--Registro de docente-->
-    <string name="txtRegistroD">Registro de docente</string>
+    <string name="txtRegistroD">Registro de Docente</string>
     <string name="etNombresD">Nombres completos</string>
     <string name="etEmailD">Email</string>
     <string name="etPasswordD">Password</string>
     <string name="etCPasswordD">Confirmar Password</string>
     <string name="btnRegistrarD">Registrarme</string>
 
+    <!--Registro de estudiante-->
+    <string name="txtRegistroE">Registro de Estudiante</string>
+    <string name="etNombresE">Nombres completos</string>
+    <string name="etEmailE">Email</string>
+    <string name="etPasswordE">Password</string>
+    <string name="etCPasswordE">Confirmar Password</string>
+    <string name="btnRegistrarE">Registrarme</string>
+
     <!--Login de docente-->
-    <string name="txtLoginD">Login de docente</string>
+    <string name="txtLoginD">Login de Docente</string>
     <string name="btnLogin">Ingresar</string>
     <string name="txtNoCuenta">¿No tienes una cuenta?</string>
     <string name="tvRegistrarD">Registrarme</string>
 
+    <!--Login de estudiante-->
+    <string name="txtLoginE">Login de Estudiante</string>
+    <string name="btnLoginE">Ingresar</string>
+    <string name="txtNoCuentaE">¿No tienes una cuenta?</string>
+    <string name="tvRegistrarE">Registrarme</string>
 
     <!--Secciones-->
     <string name="etSeccionD">Ingrese la Sección</string>

@@ -14,7 +14,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.StudMed">
         <activity
-            android:name=".Docente.evaluaciones.AgregarEvaluacionActivity"
+            android:name=".SeleccionarTipoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Estudiante.LoginEstudianteActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Estudiante.RegistroEstudianteActivity"
             android:exported="false" />
         <activity
             android:name=".Docente.LoginDocenteActivity"
@@ -30,13 +36,17 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
         <activity
             android:name=".Docente.MainActivityDocente"
             android:exported="false" />
         <activity
             android:name=".Estudiante.MainActivityEstudiante"
-            android:exported="false"></activity>
+            android:exported="false">
+
+
+        </activity>
     </application>
 
 </manifest>
