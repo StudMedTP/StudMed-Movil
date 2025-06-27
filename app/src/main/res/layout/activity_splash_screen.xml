@@ -14,14 +14,6 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:gravity="center"/>
-    
-    <com.airbnb.lottie.LottieAnimationView
-        app:lottie_fileName="icon_studmed.jpeg"
-        app:lottie_imageAssetsFolder="assets"
-        app:lottie_loop="true"
-        app:lottie_autoPlay="true"
-        android:layout_width="300dp"
-        android:layout_height="300dp"/>
 
     <TextView
         android:textSize="25sp"
