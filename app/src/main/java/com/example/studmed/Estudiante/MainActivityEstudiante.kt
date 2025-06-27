@@ -68,8 +68,7 @@ class MainActivityEstudiante : AppCompatActivity() , NavigationView.OnNavigation
 
     private fun comprobarSesion(){
         if(firebaseAuth!!.currentUser==null){
-            startActivity(Intent(this@MainActivityEstudiante, SeleccionarTipoActivity::class.java))
-            finishAffinity()
+            startActivity(Intent(applicationContext, SeleccionarTipoActivity::class.java))
         }else{
             Toast.makeText(this, "Usuario en linea", Toast.LENGTH_SHORT).show()
         }
