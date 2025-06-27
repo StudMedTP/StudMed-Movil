@@ -19,6 +19,7 @@ import com.example.studmed.Docente.Nav_Fragments_Docente.FragmentAsistenciaD
 import com.example.studmed.Docente.Nav_Fragments_Docente.FragmentEvaluacionesD
 import com.example.studmed.Docente.Nav_Fragments_Docente.FragmentInicioD
 import com.example.studmed.Docente.Nav_Fragments_Docente.FragmentNotificacionesD
+import com.example.studmed.Docente.Nav_Fragments_Docente.FragmentSeccionesD
 import com.example.studmed.R
 import com.example.studmed.databinding.ActivityMainDocenteBinding
 import com.google.android.material.navigation.NavigationView
@@ -29,7 +30,6 @@ class MainActivityDocente : AppCompatActivity() , NavigationView.OnNavigationIte
 
     private lateinit var binding : ActivityMainDocenteBinding
     private var firebaseAuth : FirebaseAuth?=null
-
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -96,6 +96,11 @@ class MainActivityDocente : AppCompatActivity() , NavigationView.OnNavigationIte
             R.id.op_evaluaciones_d->{
                 replaceFragment(FragmentEvaluacionesD())
             }
+
+            R.id.op_secciones_d->{
+                replaceFragment(FragmentSeccionesD())
+            }
+
             R.id.op_notificaciones_d->{
                 replaceFragment(FragmentNotificacionesD())
             }
