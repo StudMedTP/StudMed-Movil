@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">StudMed</string>
 
+    <string name="open_drawer">Open drawer</string>
+    <string name="close_drawer">Close drawer</string>
+
     <string name="op_inicio_d">Inicio</string>
     <string name="op_control_asistencia_d">Control de Asistencia</string>
     <string name="op_evaluaciones_d">Evaluaciones</string>
