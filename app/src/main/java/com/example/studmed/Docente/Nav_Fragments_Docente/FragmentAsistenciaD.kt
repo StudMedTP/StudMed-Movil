@@ -30,7 +30,8 @@ class FragmentAsistenciaD : Fragment() {
     private fun mostrarCodigoDelDia() {
         val codigo = (1000..9999).random()
 
-        val mensaje = "El código del día de hoy es:\n\n$codigo"
+        //val mensaje = "El código del día de hoy es:\n\n$codigo"/
+        val mensaje = "El código del día de hoy es:5698"
 
         AlertDialog.Builder(requireContext())
             .setTitle("Código del día")

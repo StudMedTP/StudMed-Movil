@@ -61,6 +61,8 @@ class MainActivityEstudiante : AppCompatActivity() , NavigationView.OnNavigation
         toggle.syncState()
 
         replaceFragment(FragmentInicioEstudiante())
+        binding.navigationView.setCheckedItem(R.id.op_inicio_e)
+
 
         verBienvenida()
 
@@ -91,7 +93,7 @@ class MainActivityEstudiante : AppCompatActivity() , NavigationView.OnNavigation
     private fun verBienvenida() {
         object : CountDownTimer(3000, 1000) {
             override fun onFinish() {
-                startActivity(Intent(applicationContext, MainActivityDocente::class.java))
+                startActivity(Intent(applicationContext, MainActivityEstudiante::class.java))
                 finishAffinity()
             }
 
