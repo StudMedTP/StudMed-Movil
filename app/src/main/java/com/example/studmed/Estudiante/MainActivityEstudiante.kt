@@ -20,7 +20,7 @@ import com.example.studmed.Docente.Nav_Fragments_Docente.FragmentNotificacionesD
 import com.example.studmed.Estudiante.Bottom_Nav_Fragments_Estudiante.FragmentPerfilE
 import com.example.studmed.Estudiante.Bottom_Nav_Fragments_Estudiante.FragmentSettingsE
 import com.example.studmed.Estudiante.Bottom_Nav_Fragments_Estudiante.FragmentSupportE
-import com.example.studmed.Estudiante.Nav_Fragments_Estudiante.FragmentAsistenciaEstudiante
+import com.example.studmed.Estudiante.Nav_Fragments_Estudiante.FragmentAsistenciaE
 import com.example.studmed.Estudiante.Nav_Fragments_Estudiante.FragmentEvaluacionesEstudiante
 import com.example.studmed.Estudiante.Nav_Fragments_Estudiante.FragmentInicioEstudiante
 import com.example.studmed.Estudiante.Nav_Fragments_Estudiante.FragmentNotificacionesEstudiante
@@ -110,7 +110,7 @@ class MainActivityEstudiante : AppCompatActivity() , NavigationView.OnNavigation
                 replaceFragment(FragmentInicioEstudiante())
             }
             R.id.op_control_asistencia_e->{
-                replaceFragment(FragmentAsistenciaEstudiante())
+                replaceFragment(FragmentAsistenciaE())
             }
             R.id.op_evaluaciones_e->{
                 replaceFragment(FragmentEvaluacionesEstudiante())

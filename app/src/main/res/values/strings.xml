@@ -86,8 +86,14 @@
     <!--Secciones-->
     <string name="item_nombre_seccion_d">Nombre de seccion</string>
 
-
-
+    <!-- Asistencia Estudiante -->
+    <string name="hospital_nombre">Hospital Rebagliati</string>
+    <string name="fecha_ejemplo_1">Fecha: 02/07/2025</string>
+    <string name="hora_ejemplo_1">Hora: 08:00 AM</string>
+    <string name="fecha_ejemplo_2">Fecha: 02/07/2025</string>
+    <string name="hora_ejemplo_2">Hora: 02:00 PM</string>
+    <string name="estado_pendiente">Estado: Pendiente de atención</string>
+    <string name="btn_firmar_asistencia">Firmar asistencia con código y geolocalización</string>
 
 
     <!-- TODO: Remove or change this placeholder text -->
