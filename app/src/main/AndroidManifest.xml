@@ -17,6 +17,9 @@
             android:name=".SeleccionarTipoActivity"
             android:exported="false" />
         <activity
+            android:name=".Docente.evaluaciones.AgregarEvaluacionActivity"
+            android:exported="false" />
+        <activity
             android:name=".Estudiante.LoginEstudianteActivity"
             android:exported="false" />
         <activity
@@ -38,15 +41,14 @@
             </intent-filter>
 
         </activity>
+
         <activity
             android:name=".Docente.MainActivityDocente"
             android:exported="false" />
         <activity
             android:name=".Estudiante.MainActivityEstudiante"
-            android:exported="false">
+            android:exported="false" />
 
-
-        </activity>
     </application>
 
 </manifest>
