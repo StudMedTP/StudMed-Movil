@@ -3,15 +3,35 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Estudiante.Nav_Fragments_Estudiante.FragmentEvaluacionesEstudiante">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="EVALUACIONES"
-        android:gravity="center"
-        android:textSize="25sp"
-        android:textStyle="bold"/>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Título centrado -->
+        <TextView
+            android:id="@+id/tvTituloEvaluaciones"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Evaluaciones"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="24dp" />
+
+        <!--Lista de secciones-->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvSecciones"
+            android:layout_margin="5dp"
+            tools:listitem="@layout/item_evaluacion_e"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
 </FrameLayout>

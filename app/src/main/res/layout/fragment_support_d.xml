@@ -1,125 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
-    android:padding="16dp">
+    tools:context=".Docente.Botton_Nav_Fragments_Docente.FragmentSupportD">
 
-    <LinearLayout
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:gravity="center_horizontal">
+        android:layout_height="match_parent"
+        android:text="Support"
+        android:gravity="center"
+        android:textSize="25sp"
+        android:textStyle="bold"/>
 
-        <!-- Sección: ¿Dudas del servicio? -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="¿Dudas del servicio?"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="8dp"
-            android:textColor="#000000"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Revisa los diferentes apartados:"
-            android:textSize="16sp"
-            android:textColor="#000000"
-            android:layout_marginBottom="16dp"/>
-
-        <!-- Grid de botones -->
-        <GridLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:columnCount="2"
-            android:alignmentMode="alignMargins"
-            android:rowOrderPreserved="false"
-            android:columnOrderPreserved="false"
-            android:useDefaultMargins="true">
-
-            <!-- Botón 1 -->
-            <Button
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
-                android:text="Control de Asistencia"
-                android:backgroundTint="#AEE3FA"
-                android:textColor="#000000"
-                android:textStyle="bold"/>
-
-            <!-- Botón 2 -->
-            <Button
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
-                android:text="Notificaciones"
-                android:backgroundTint="#AEE3FA"
-                android:textColor="#000000"
-                android:textStyle="bold"/>
-
-            <!-- Botón 3 -->
-            <Button
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
-                android:text="Ubicación"
-                android:backgroundTint="#AEE3FA"
-                android:textColor="#000000"
-                android:textStyle="bold"/>
-
-            <!-- Botón 4 -->
-            <Button
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
-                android:text="Evaluaciones"
-                android:backgroundTint="#AEE3FA"
-                android:textColor="#000000"
-                android:textStyle="bold"/>
-        </GridLayout>
-
-        <!-- Separador -->
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="24dp" />
-
-        <!-- Sección: Contacto personalizado -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="¿Necesitas ayuda personalizada?"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:textColor="#000000"
-            android:layout_marginBottom="8dp"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="¡Contáctanos!"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            android:layout_marginBottom="8dp"
-            android:textColor="#000000"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Correo electrónico:\nsoporte.contacto@studmed.com"
-            android:textSize="14sp"
-            android:textColor="#000000"
-            android:layout_marginBottom="8dp"
-            android:gravity="center_horizontal"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Vía telefónica: 01 750 6900"
-            android:textSize="14sp"
-            android:textColor="#000000"/>
-
-    </LinearLayout>
-</ScrollView>
+</FrameLayout>
