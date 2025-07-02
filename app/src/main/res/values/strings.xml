@@ -87,7 +87,21 @@
 
     <string name="item_nombre_seccion_d">Nombre de Sección</string>
 
-    <string name="item_nombre_evaluacion_e">Nombre de Evaluación</string>
+    <string name="item_nombre_evaluacion_e">Titulo</string>
+
+    <string name="item_seccion_evaluacion_e">Seccion</string>
+
+    <string name="item_descripcion_evaluacion_e">Descripción</string>
+
+
+    <string name="item_nombre_evaluacion_d">Titulo</string>
+
+    <string name="item_seccion_evaluacion_d">Seccion</string>
+
+    <string name="item_descripcion_evaluacion_d">Descripción</string>
+
+
+
 
 
 

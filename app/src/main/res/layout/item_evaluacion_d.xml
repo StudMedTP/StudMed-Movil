@@ -19,24 +19,24 @@
         android:layout_height="wrap_content">
 
         <TextView
-            android:id="@+id/item_nombre_evaluacion_e"
-            android:text="@string/item_nombre_evaluacion_e"
+            android:id="@+id/item_nombre_evaluacion_d"
+            android:text="@string/item_nombre_evaluacion_d"
             android:layout_weight="1"
             android:layout_gravity="center_vertical"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
         <TextView
-            android:id="@+id/tvSeccionEvaluacion"
-            android:text="@string/item_seccion_evaluacion_e"
+            android:id="@+id/item_seccion_evaluacion_d"
+            android:text="@string/item_seccion_evaluacion_d"
             android:layout_weight="1"
             android:layout_gravity="center_vertical"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
         <TextView
-            android:id="@+id/tvDescripcionEvaluacion"
-            android:text="@string/item_descripcion_evaluacion_e"
+            android:id="@+id/item_descripcion_evaluacion_d"
+            android:text="@string/item_descripcion_evaluacion_d"
             android:layout_weight="1"
             android:layout_gravity="center_vertical"
             android:layout_width="wrap_content"
@@ -46,7 +46,5 @@
 
 
     </androidx.appcompat.widget.LinearLayoutCompat>
-
-
 
 </com.google.android.material.card.MaterialCardView>

@@ -9,7 +9,6 @@ import com.example.studmed.databinding.ActivitySeleccionarTipoBinding
 
 class SeleccionarTipoActivity : AppCompatActivity() {
 
-
     private lateinit var binding : ActivitySeleccionarTipoBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
