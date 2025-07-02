@@ -1,18 +1,19 @@
 package com.example.studmed.Estudiante.Nav_Fragments_Estudiante
 
 import android.app.AlertDialog
-import android.location.Location
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
+import android.widget.*
 import androidx.fragment.app.Fragment
 import com.example.studmed.R
 import java.text.SimpleDateFormat
 import java.util.*
 
 class FragmentAsistenciaE : Fragment() {
+
+    private val codigoCorrecto = "5698" // Código que genera el docente
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -58,8 +59,49 @@ class FragmentAsistenciaE : Fragment() {
             .setNegativeButton("Regresar") { dialog, _ ->
                 dialog.dismiss()
             }
-            .setPositiveButton("Siguiente") { _, _ ->
-                // Aquí luego conectarás con escáner o validación
+            .setPositiveButton("Siguiente") { dialog, _ ->
+                dialog.dismiss()
+                mostrarDialogoCodigo()
+            }
+            .show()
+    }
+
+    private fun mostrarDialogoCodigo() {
+        val inputLayout = LinearLayout(requireContext()).apply {
+            orientation = LinearLayout.VERTICAL
+            setPadding(50, 30, 50, 10)
+        }
+
+        val editText = EditText(requireContext()).apply {
+            hint = "Ingrese código"
+        }
+
+        inputLayout.addView(editText)
+
+        AlertDialog.Builder(requireContext())
+            .setTitle("Verificación de código")
+            .setMessage("Por favor, coloque el código brindado")
+            .setView(inputLayout)
+            .setNegativeButton("Regresar") { dialog, _ ->
+                dialog.dismiss()
+            }
+            .setPositiveButton("Aceptar") { dialog, _ ->
+                val codigoIngresado = editText.text.toString().trim()
+                if (codigoIngresado == codigoCorrecto) {
+                    Toast.makeText(
+                        requireContext(),
+                        "Código correcto. Asistencia registrada correctamente.",
+                        Toast.LENGTH_LONG
+                    ).show()
+                    // Aquí puedes agregar lógica extra si quieres
+                } else {
+                    Toast.makeText(
+                        requireContext(),
+                        "Código incorrecto. Inténtalo nuevamente.",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                }
+                dialog.dismiss()
             }
             .show()
     }
