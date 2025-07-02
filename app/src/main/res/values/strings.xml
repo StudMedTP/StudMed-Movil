@@ -84,7 +84,12 @@
 
 
     <!--Secciones-->
-    <string name="item_nombre_seccion_d">Nombre de seccion</string>
+
+    <string name="item_nombre_seccion_d">Nombre de Sección</string>
+
+    <string name="item_nombre_evaluacion_e">Nombre de Evaluación</string>
+
+
 
     <!-- Asistencia Estudiante -->
     <string name="hospital_nombre">Hospital Rebagliati</string>
