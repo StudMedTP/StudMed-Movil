@@ -101,7 +101,7 @@ class MainActivityEstudiante : AppCompatActivity() , NavigationView.OnNavigation
 
             }
 
-        }.start()
+        }/*.start()*/
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
