@@ -45,26 +45,34 @@ class SplashScreenActivity : AppCompatActivity() {
         val firebaseUser = firebaseAuth.currentUser
         if (firebaseUser == null){
             startActivity(Intent(this, SeleccionarTipoActivity::class.java))
-        }else{
+            finishAffinity()
+        } else {
             val reference = FirebaseDatabase.getInstance().getReference("Usuarios")
             reference.child(firebaseUser.uid)
-                .addListenerForSingleValueEvent(object : ValueEventListener{
+                .addListenerForSingleValueEvent(object : ValueEventListener {
                     override fun onDataChange(snapshot: DataSnapshot) {
                         val tipoU = snapshot.child("tipoUsuario").value
 
-                        if (tipoU == "docente"){
-                            startActivity(Intent(this@SplashScreenActivity, SeleccionarTipoActivity::class.java))
+                        if (tipoU == "docente") {
+                            startActivity(Intent(this@SplashScreenActivity, MainActivityDocente::class.java))
                             finishAffinity()
-                        }else if (tipoU == "estudiante"){
+                        } else if (tipoU == "estudiante") {
+                            startActivity(Intent(this@SplashScreenActivity, MainActivityEstudiante::class.java))
+                            finishAffinity()
+                        } else {
+                            // Si no hay tipo definido o es otro valor
                             startActivity(Intent(this@SplashScreenActivity, SeleccionarTipoActivity::class.java))
                             finishAffinity()
                         }
                     }
 
                     override fun onCancelled(error: DatabaseError) {
-
+                        // En caso de error, mejor volver al selector
+                        startActivity(Intent(this@SplashScreenActivity, SeleccionarTipoActivity::class.java))
+                        finishAffinity()
                     }
-                } )
+                })
         }
     }
+
 }
