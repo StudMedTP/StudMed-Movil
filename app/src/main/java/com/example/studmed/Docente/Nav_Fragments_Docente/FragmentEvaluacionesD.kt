@@ -32,7 +32,7 @@ class FragmentEvaluacionesD : Fragment() {
         firebaseAuth = FirebaseAuth.getInstance()
         val uid = firebaseAuth.currentUser?.uid ?: ""
 
-        databaseRef = FirebaseDatabase.getInstance().getReference("Evaluaciones").child(uid)
+        databaseRef = FirebaseDatabase.getInstance().getReference("Evaluaciones")
 
         // 🔁 Usamos rvSeccionesd según tu XML
         binding.rvSeccionesd.layoutManager = LinearLayoutManager(context)
@@ -55,9 +55,13 @@ class FragmentEvaluacionesD : Fragment() {
                 evaluacionList.clear()
                 for (dataSnap in snapshot.children) {
                     val evaluacion = dataSnap.getValue(ModeloEvaluacion::class.java)
+                    if (evaluacion != null) {
+                        evaluacionList.add(evaluacion)
+                    }
+                    /*
                     evaluacion?.let {
                         evaluacionList.add(it)
-                    }
+                    }*/
                 }
                 adapterEvaluacion.notifyDataSetChanged()
             }
