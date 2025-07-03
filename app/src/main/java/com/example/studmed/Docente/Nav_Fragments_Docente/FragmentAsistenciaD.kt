@@ -8,7 +8,8 @@ import android.view.ViewGroup
 import android.widget.Button
 import androidx.fragment.app.Fragment
 import com.example.studmed.R
-import kotlin.random.Random
+import java.text.SimpleDateFormat
+import java.util.*
 
 class FragmentAsistenciaD : Fragment() {
 
@@ -28,10 +29,9 @@ class FragmentAsistenciaD : Fragment() {
     }
 
     private fun mostrarCodigoDelDia() {
-        val codigo = (1000..9999).random()
+        val codigo = obtenerCodigoDelDia()
 
-        //val mensaje = "El código del día de hoy es:\n\n$codigo"/
-        val mensaje = "El código del día de hoy es:5698"
+        val mensaje = "El código del día de hoy es: $codigo"
 
         AlertDialog.Builder(requireContext())
             .setTitle("Código del día")
@@ -39,6 +39,12 @@ class FragmentAsistenciaD : Fragment() {
             .setPositiveButton("Aceptar", null)
             .show()
     }
+
+    private fun obtenerCodigoDelDia(): Int {
+        val formatoFecha = SimpleDateFormat("dd-MM-yyyy", Locale.getDefault())
+        val fecha = formatoFecha.format(Date())
+        val seed = fecha.hashCode().toLong()
+        val random = Random(seed)
+        return random.nextInt(9000) + 1000 // Código entre 1000 y 9999
+    }
 }
-
-

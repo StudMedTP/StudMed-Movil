@@ -13,8 +13,6 @@ import java.util.*
 
 class FragmentAsistenciaE : Fragment() {
 
-    private val codigoCorrecto = "5698" // Código que genera el docente
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -87,6 +85,8 @@ class FragmentAsistenciaE : Fragment() {
             }
             .setPositiveButton("Aceptar") { dialog, _ ->
                 val codigoIngresado = editText.text.toString().trim()
+                val codigoCorrecto = obtenerCodigoDelDia().toString()
+
                 if (codigoIngresado == codigoCorrecto) {
                     Toast.makeText(
                         requireContext(),
@@ -104,5 +104,13 @@ class FragmentAsistenciaE : Fragment() {
                 dialog.dismiss()
             }
             .show()
+    }
+
+    private fun obtenerCodigoDelDia(): Int {
+        val formatoFecha = SimpleDateFormat("dd-MM-yyyy", Locale.getDefault())
+        val fecha = formatoFecha.format(Date())
+        val seed = fecha.hashCode().toLong()
+        val random = Random(seed)
+        return random.nextInt(9000) + 1000
     }
 }
