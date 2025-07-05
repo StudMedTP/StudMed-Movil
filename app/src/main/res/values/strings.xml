@@ -3,7 +3,7 @@
 
     <string name="open_drawer">Open drawer</string>
     <string name="close_drawer">Close drawer</string>
-    
+
     <string name="tipoDocente">Docente</string>
     <string name="tipoEstudiante">Estudiante</string>
 
@@ -99,10 +99,6 @@
     <string name="item_seccion_evaluacion_d">Seccion</string>
 
     <string name="item_descripcion_evaluacion_d">Descripción</string>
-
-
-
-
 
 
     <!-- Asistencia Estudiante -->
